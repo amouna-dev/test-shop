@@ -1,5 +1,6 @@
 const express =require('express')
 const connectDB = require('./config/connectDB')
+const path = require('path')
 require('dotenv').config('./config/.env')
 const cors = require('cors')
 const authRouter = require('./Routes/Auth')
