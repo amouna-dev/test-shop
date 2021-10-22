@@ -1,5 +1,7 @@
 const express =require('express')
 const connectDB = require('./config/connectDB')
+require('dotenv').config('./config/.env')
+const cors = require('cors')
 const authRouter = require('./Routes/Auth')
 const produitRouter = require("./Routes/ProduitRouter")
 const userRouter =require('./Routes/User')
@@ -8,6 +10,9 @@ const orderRouter = require('./Routes/OrderRoutes')
 
 const app = express()
 connectDB()
+
+app.use(cors())
+
 //middleware
 app.use(express.json())
 //use Routes
@@ -26,7 +31,7 @@ if(process.env.NODE_ENV === "production") {
 
     //index.html for all page routes
     app.get('*', (req, res) =>{
-        res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
+        res.sendFile(path.resolve(__dirname, "build", "index.html"))
     })
 }
 
