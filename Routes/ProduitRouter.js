@@ -1,4 +1,4 @@
- const Produit =require ('../models/Produit')
+ const Produit =require ('../models/produit')
  const Router = require('express').Router()
 
     
