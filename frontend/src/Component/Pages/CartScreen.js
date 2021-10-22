@@ -15,7 +15,7 @@ const CartScreen = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const {isAuth , user}   = useSelector(state => state.AuthReducer)
+  const {isAuth }   = useSelector(state => state.AuthReducer)
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;

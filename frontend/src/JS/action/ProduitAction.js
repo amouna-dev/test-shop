@@ -1,12 +1,12 @@
 import axios from "axios"
-import{  PRODUCT_LIST,
+import{  
   PRODUCT_LIST_SUCCESS,
    PRODUCT_LIST_FAIL  ,
-  GET_PRODUCT_DETAILS_REQUEST ,
+  
    GET_PRODUCT_DETAILS_SUCCESS,
    GET_PRODUCT_DETAILS_FAIL ,
    GET_PRODUCT_DETAILS_RESET ,
-   PRODUCT_DELETE_REQUEST ,
+ 
    PRODUCT_DELETE_SUCCESS ,
    PRODUCT_DELETE_FAIL ,
    PRODUCT_SAVE_REQUEST ,
@@ -16,7 +16,7 @@ import{  PRODUCT_LIST,
 
 export const  getProduit = ()=>async(dispatch)=>{
     try {
-        const res =await axios.get('/api/auths/produit')
+        const res =await axios.get('/api/products/produit')
         dispatch({
             type:PRODUCT_LIST_SUCCESS,
             payload:res.data.response  
@@ -35,7 +35,7 @@ export const  getProduit = ()=>async(dispatch)=>{
 export const getProductDetails = (id) => async (dispatch) => {
     try {
   
-     const result = await axios.get(`/api/auths/produit/${id}`);
+     const result = await axios.get(`/api/products/produit/${id}`);
   
       dispatch({
         type:GET_PRODUCT_DETAILS_SUCCESS,
@@ -64,13 +64,13 @@ export const getProductDetails = (id) => async (dispatch) => {
         dispatch({type:PRODUCT_SAVE_REQUEST, payload:product});
        // const {userSignin:{userInfo}}=getState();
         if(!product._id){
-            const res = await axios.post("api/auths/produit",product
+            const res = await axios.post("api/products/produit",product
             
             );
             dispatch({type:PRODUCT_SAVE_SUCCESS, payload:res});
     
         } else{
-            const res= await axios.put("api/auths/produit/produit/"+product._id,product  );
+            const res= await axios.put("api/products/produit/produit/"+product._id,product  );
             dispatch({type:PRODUCT_SAVE_SUCCESS, payload:res});
     
         }
@@ -91,7 +91,7 @@ export const deleteProduct = (id) => async(dispatch) => {
     }
 }
       
-      const res= await axios.delete(`api/auths/produit/produit/${id}`,  config );
+      const res= await axios.delete(`api/products/produit/produit/${id}`,  config );
  
       dispatch({type:PRODUCT_DELETE_SUCCESS,payload:res,success:true});
   }catch(error){

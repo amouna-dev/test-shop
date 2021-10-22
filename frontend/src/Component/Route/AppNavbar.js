@@ -8,14 +8,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Login from '../Auth/Login'
 import Register from '../Auth/Register';
 import {useSelector} from 'react-redux';
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logoutUser } from '../../JS/action/AuthAction';
-import {Form , FormControl,ButtonGroup , DropdownButton ,Dropdown} from 'react-bootstrap'
+import {ButtonGroup , DropdownButton ,Dropdown} from 'react-bootstrap'
 import "./../Route/AppNavbar.css"
-import Dashboard from '../Pages/Dashboard';
-import Profile from '../Pages/Profile';
+//import Dashboard from '../Pages/Dashboard';
+//import Profile from '../Pages/Profile';
 
 
 const useStyles = makeStyles((theme) => ({

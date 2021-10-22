@@ -13,6 +13,7 @@ const Home = () => {
 
 useEffect(() => {
   dispatch(getProduit())
+  // eslint-disable-next-line
 }, [])
 
     return (

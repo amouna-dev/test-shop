@@ -27,8 +27,8 @@ if(successSave){
             setModalVisible(false);
        }
        dispatch(getProduit());
- 
-    },[successSave, successDelete])
+ //
+    },[dispatch])
 
     const openModal = (product)=>{
         setModalVisible(true);
@@ -60,7 +60,7 @@ const {produits} = useSelector(state => state.ProduitReducer)
 
 useEffect(() => {
  dispatch(getProduit())
-}, [])
+}, [dispatch])
    
         // if(user.role==='admin'){
              return (

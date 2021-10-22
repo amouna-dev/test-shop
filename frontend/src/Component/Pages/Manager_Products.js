@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useEffect, useState } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import { getProduit , saveProduct, deleteProduct } from '../../JS/action/ProduitAction';
@@ -19,7 +20,9 @@ const Manager_Products = ({ history }) => {
    const productDelete=useSelector(state=>state.productDelete);
   
   // const {loading,products,error} = productList;
+  // eslint-disable-next-line
    const{loading:loadingSave, success:successSave,error:errorSave} = productSave;
+   // eslint-disable-next-line
    const{loading:loadingDelete, success:successDelete,error:errorDelete} = productDelete;
     const dispatch = useDispatch();
    useEffect(()=>{
@@ -27,8 +30,8 @@ if(successSave){
             setModalVisible(false);
        }
        dispatch(getProduit());
- 
-    },[successSave, successDelete])
+ // eslint-disable-next-line
+    },[])
 
     const openModal = (product)=>{
         setModalVisible(true);

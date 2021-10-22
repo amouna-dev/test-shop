@@ -5,7 +5,7 @@ import CheckoutSteps from '../CheckoutSteps/CheckoutSteps'
 //import FormContainer from '../components/FormContainer'
 //import Message from '../components/Message'
 
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import { createOrder } from '../../../JS/action/orderActions'
 
 const useStyles = makeStyles({
@@ -21,7 +21,7 @@ const PlaceOrder = ({ history }) => {
 
     const cart = useSelector(state => state.cart)
     const orderCreate = useSelector((state) => state.orderReducer);
-    const { loading, success, error, order } = orderCreate;
+    const { success, error, order } = orderCreate;
     //const user = useSelector(state => state.AuthReducer.user)
 
     // Calculate prices

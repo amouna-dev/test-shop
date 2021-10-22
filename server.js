@@ -12,7 +12,7 @@ connectDB()
 app.use(express.json())
 //use Routes
 app.use('/api/auths',authRouter);
-app.use('/api/auths', produitRouter);
+app.use('/api/products', produitRouter);
 app.use('/api/user',userRouter);
 app.use('/api/order', orderRouter)
 

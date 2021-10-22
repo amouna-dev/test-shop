@@ -1,4 +1,4 @@
-import { USER_LOADING , REGISTER_USER, LOGIN_USER , LOGOUT_USER , GET_AUTH_USER , AUTH_ERRORS } from '../constant/Action-types'
+import { USER_LOADING , REGISTER_USER, LOGIN_USER , LOGOUT_USER , GET_AUTH_USER  } from '../constant/Action-types'
 
 const initialState={
     user :null ,

@@ -1,33 +1,30 @@
-import { Box, Button, Card, Divider, Grid, LinearProgress, List, ListItem } from '@material-ui/core'
+import { Box, Card, Divider, Grid, LinearProgress, List, ListItem } from '@material-ui/core'
 
 
-import React, { useEffect} from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
 import { Link } from 'react-router-dom'
-import { updateOrder } from '../../JS/action/orderActions'
+//import { updateOrder } from '../../JS/action/orderActions'
 
 const Order = ({ match, history }) => {
    
 
-    const dispatch = useDispatch()
+    
 
     const orderDetails = useSelector(state => state.orderReducer)
     const { order, loading, error } = orderDetails
 
-    const user= useSelector(state => state.AuthReducer.user)
+    //const user= useSelector(state => state.AuthReducer.user)
     
 
-    useEffect(() => {
-           
-      
-    }, [])
+    
 
    
 
-    const successPaymentHandler = () => {
-        dispatch(updateOrder(order._id))
-    }
+    // const successPaymentHandler = () => {
+    //     dispatch(updateOrder(order._id))
+    // }
 
     return (
         loading ? <LinearProgress/> : error ? {error} : 

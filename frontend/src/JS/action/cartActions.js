@@ -1,5 +1,5 @@
 import {
- ADD_TO_CART,REMOVE_FROM_CART ,CART_RESET ,CART_EMPTY ,CART_ADD_ITEM ,CART_REMOVE_ITEM
+ ADD_TO_CART ,CART_REMOVE_ITEM
    ,CART_SAVE_SHIPPING_ADDRESS 
   
 
@@ -43,10 +43,3 @@ export const saveShippingAddress = (data) => (dispatch) => {
   localStorage.setItem('shippingAddress', JSON.stringify(data));
 }
 
-// export const savePaymentMethod = (data) => (dispatch) => {
-//   dispatch({ 
-//     type: CART_SAVE_PAYMENT_METHOD, 
-//     payload: data 
-//   })
-//   localStorage.getItem('paymentMethod', JSON.stringify(data))
-// };

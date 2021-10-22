@@ -1,20 +1,21 @@
+// eslint-disable-next-line
 import { Box, Button, Grid, InputLabel, LinearProgress, makeStyles, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from '@material-ui/core'
 import{Card} from 'react-bootstrap'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUserDetails, updateUserProfile } from '../../JS/action/userAction'
-import { getMyOrders } from '../../JS/action/orderActions'
-import Message from './Message'
-import CloseIcon from '@material-ui/icons/Close'
-import { Link } from 'react-router-dom'
-import { USER_UPDATE_PROFILE_RESET } from '../../JS/constant/userConstants'
+//import { getUserDetails, updateUserProfile } from '../../JS/action/userAction'
+//import { getMyOrders } from '../../JS/action/orderActions'
+//import Message from './Message'
+//import CloseIcon from '@material-ui/icons/Close'
+//import { Link } from 'react-router-dom'
+//import { USER_UPDATE_PROFILE_RESET } from '../../JS/constant/userConstants'
 
-const useStyles = makeStyles(theme => ({
-    textfield: {
-        marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(1)
-    }
-}))
+// const useStyles = makeStyles(theme => ({
+//     textfield: {
+//         marginTop: theme.spacing(1),
+//         marginBottom: theme.spacing(1)
+//     }
+// }))
 
 const Profile = ({ location, history }) => {
    
@@ -22,7 +23,7 @@ const Profile = ({ location, history }) => {
 
     const dispatch = useDispatch()
 
-    const {isAuth , user}   = useSelector(state => state.AuthReducer)
+    const { user}   = useSelector(state => state.AuthReducer)
 
     
 
