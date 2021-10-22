@@ -28,11 +28,11 @@ app.use('/api/order', orderRouter)
 if(process.env.NODE_ENV === "production") {
     //set static folder
     //All the js and css files will be read and served from this folder
-    app.use(express.static("frontend/build"))
+    app.use(express.static("../build"))
 
     //index.html for all page routes
     app.get('*', (req, res) =>{
-        res.sendFile(path.join(__dirname, "frontend", "build", "index.html"))
+        res.sendFile(path.join(__dirname, "..", "build", "index.html"))
     })
 }
 
