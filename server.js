@@ -30,7 +30,7 @@ if(process.env.NODE_ENV === "production") {
     //All the js and css files will be read and served from this folder
     app.use(express.static("frontend/build"))
 
-    //affich index.html for all page routes not exist
+    //index.html for all page routes
     app.get('*', (req, res) =>{
         res.sendFile(path.resolve(__dirname, "build", "index.html"))
     })
