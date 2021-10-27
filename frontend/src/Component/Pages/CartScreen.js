@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 import { useHistory } from 'react-router-dom';
 
 // Components
-import CartItem from "../Pages/component/CartItem";
+import CartItem from "./CartItem";
 
 // Actions
 import { addToCart, removeFromCart } from "../../JS/action/cartActions";

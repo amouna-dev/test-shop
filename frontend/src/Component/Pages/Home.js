@@ -1,7 +1,7 @@
 import React, {useEffect}from 'react'
 import {useSelector, useDispatch} from 'react-redux';
 import { getProduit } from '../../JS/action/ProduitAction';
-import Produit from './component/produit'
+import Produit from './Produit'
 import {Carousel} from 'react-bootstrap'
 
 

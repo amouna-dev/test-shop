@@ -1,4 +1,5 @@
-import './App.css';
+
+import React from 'react'
 import { useDispatch } from 'react-redux';
 import AppNavbar from './Component/Route/AppNavbar.js'
 import {BrowserRouter as Router , Switch ,Route} from 'react-router-dom'
@@ -8,8 +9,8 @@ import Home from './Component/Pages/Home';
 import PrivateRoute from './Component/Routes/PrivateRoute';
 import ProduitDetail from './Component/Pages/ProduitDetail';
 import CartScreen from './Component/Pages/CartScreen';
-import Shipping from './Component/FollowPages/components/Shopping';
-import PlaceOrder from './Component/FollowPages/components/PlaceOrder';
+import Shipping from './Component/FollowPages/Shopping';
+import PlaceOrder from './Component/FollowPages/PlaceOrder';
 import {getAuthUser} from "./JS/action/AuthAction"
 import UserListe from './Component/Pages/UserListe';
 import Footer from './Component/Pages/Footer';
@@ -31,7 +32,8 @@ function App() {
   },[])
 
   return (
-    <div >
+    <>
+    <div className="App">
        <Router>
          
         <AppNavbar  />
@@ -40,15 +42,14 @@ function App() {
          <Route exact path="/" component={Home}/>
          <Route exact path="/produit/:id" component={ProduitDetail} />
           <Route exact path="/cart" component={CartScreen} />
-          <Route path="/shipping" component={Shipping}/>
-          <Route path="/placeorder" component={PlaceOrder}/>
+          <Route exact path="/shipping" component={Shipping}/>
+          <Route exact path="/placeorder" component={PlaceOrder}/>
           <Route exact path="/order/:id" component={Order} />
-          <PrivateRoute path="/Manager_Products" component={Manager_Products}/>
-          <Route path='/admin/userlist' component={UserListe} />
+          <PrivateRoute exact path="/Manager_Products" component={Manager_Products}/>
+          <Route  exact path='/admin/userlist' component={UserListe} />
           <Route exact path="/orderlist" component={OrderList} />
           <Route exact path="/history" component={Profile} />
-          <Route path='/admin/user/:id/edit' component={edit} />
-
+          <Route exact path='/admin/user/:id/edit' component={edit} />
 
      </Switch>
    
@@ -56,6 +57,7 @@ function App() {
 
      <Footer/>
     </div>
+    </>
   );
   
 }
