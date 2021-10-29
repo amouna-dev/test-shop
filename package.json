@@ -8,9 +8,11 @@
     "npm": "7.x"
   },
   "scripts": {
-    "front": "cd frontend && npm start",
-    "back": "nodemon server.js",
-    "start": "concurrently \"npm run front\" \"npm run back\"",
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "start": "nodemon server.js",
+     "front": "cd frontend && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prexfix frontend"
   },
   "author": "",
